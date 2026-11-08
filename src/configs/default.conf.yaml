@@ -1,0 +1,20 @@
+hex_dims:
+  # base inner radius - half of the distances between two hexagon edges
+  r_mm: 15.0
+  # total height of hexagon
+  height_mm: 8.0
+
+mount_dims:
+  # length of male mounting point, also width of smaller, trapezoid base
+  length_mm: 5.0
+  # difference between smaller and larger trapezoid base.
+  # larger male mounting point base is equal to diff + length
+  base_diff_mm: 2.0
+  # height of the female mounting point
+  height_mm: 7.0
+  # margin of the height - the amount of height cut off from
+  # male mounting point compared to female socket
+  height_margin_mm: 1.0
+  # margin of the width - the amount of width cut off from male
+  # mouting point compared to female socket
+  width_margin_mm: 0.06
