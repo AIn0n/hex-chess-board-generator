@@ -24,7 +24,7 @@ class MountingDimensions:
 class ConfigSchema:
     hex_dims: HexagonDimensions = field(default_factory=HexagonDimensions)
     mount_dims: MountingDimensions = field(default_factory=MountingDimensions)
-    outpur_dir: Path = Path("./build")
+    output_dir: Path = Path("./build")
 
 
 def load_config(path: Path) -> ConfigSchema:
@@ -32,4 +32,10 @@ def load_config(path: Path) -> ConfigSchema:
 
     schema = OmegaConf.structured(ConfigSchema)
     merged = OmegaConf.merge(schema, yaml_config)
+    return cast(ConfigSchema, OmegaConf.to_object(merged))
+
+
+def from_dict(d: dict) -> ConfigSchema:
+    schema = OmegaConf.structured(ConfigSchema)
+    merged = OmegaConf.merge(schema, d)
     return cast(ConfigSchema, OmegaConf.to_object(merged))

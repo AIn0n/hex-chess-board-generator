@@ -22,8 +22,8 @@ def main() -> None:
     conf = load_config(path=Path(args.config_path))
 
     model = generate_hexagon(conf)
-    conf.outpur_dir.mkdir(parents=True, exist_ok=True)
-    model.save_as_stl(conf.outpur_dir / "hexagon.stl")
+    conf.output_dir.mkdir(parents=True, exist_ok=True)
+    model.save_as_stl(conf.output_dir / "hexagon.stl")
 
 
 if __name__ == "__main__":

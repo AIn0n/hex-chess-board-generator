@@ -18,3 +18,5 @@ mount_dims:
   # margin of the width - the amount of width cut off from male
   # mouting point compared to female socket
   width_margin_mm: 0.06
+
+output_dir: "./build"
